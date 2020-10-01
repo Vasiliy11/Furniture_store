@@ -15,7 +15,7 @@
     }
 }
 
-.show-btn-wrapper{
+.show-btns-wrapper{
     display: flex;
     padding: 1rem;
 }
@@ -24,6 +24,7 @@
     flex: 0 1 50%;
     background-color: $fontColor;
     font-size: 1.5rem;
+    padding: 1rem;
     color: #fff;
     text-transform: uppercase;
     letter-spacing: .2rem;
@@ -90,23 +91,19 @@
     pointer-events: none;
 }
 
-.show-form:checked ~ .show-btns-wrapper .show-login-form{
+#show-form:checked ~ .show-btns-wrapper .show-login-form{
     color: #888;
     background-color: #34598f;
     pointer-events: none;
 }
 
-.show-form:checked ~ .show-btns-wrapper .show-signup-form{
+#show-form:checked ~ .show-btns-wrapper .show-signup-form{
     color: #fff;
     background-color: $fontColor;
     pointer-events: initial;
 }
 
-.show-form:checked ~ .signup-form{
-    display: none;
-}
-
-.show-form:checked ~ .login-form{
+#show-form:checked ~ .signup-form{
     display: none;
 }
 
@@ -114,7 +111,7 @@
     display: block;
 }
 
-#show-hide-forms:checked .forms-wrapper{
+#show-hide-forms:checked ~ .forms-wrapper{
     display: block;
     animation: anim .5s;
 }
